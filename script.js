@@ -21,29 +21,29 @@ let promptIndex = 0;
 
 // Handle "Don't Forgive" button click (Main Screen)
 dontForgiveButton.addEventListener('click', () => {
-  showPopup();
+  showPopup(); // Show the popup
 });
 
 // Handle "Forgive" button click (Main Screen)
 forgiveButton.addEventListener('click', () => {
-  showForgiveness();
+  showForgiveness(); // Display forgiveness message
 });
 
 // Handle "Don't Forgive" button click (Popup)
 popupDontForgive.addEventListener('click', () => {
-  promptIndex++;
+  promptIndex++; // Move to the next prompt
   if (promptIndex >= prompts.length) {
     popupMessage.textContent = "Thank you maaf karne ke liye mera baby ❤️";
     popupDontForgive.style.display = "none"; // Hide the "Don't Forgive" button
   } else {
-    popupMessage.textContent = prompts[promptIndex];
+    popupMessage.textContent = prompts[promptIndex]; // Update the popup message
   }
 });
 
 // Handle "Forgive" button click (Popup)
 popupForgive.addEventListener('click', () => {
-  closePopup();
-  showForgiveness();
+  closePopup(); // Close the popup
+  showForgiveness(); // Display forgiveness message
 });
 
 // Show the popup
@@ -59,7 +59,7 @@ function closePopup() {
 // Show forgiveness message
 function showForgiveness() {
   responseDiv.innerHTML = `
-    🥳 Yay! Thankkkk you mera pookie maaf karne ke liye mera baby 💖💖💖💖💖💖
+    🥳🥳 Yay! Thankkkk you mera pookie maaf karne ke liye mera baby 💖💖💖💖💖💖💖
   `;
   responseDiv.style.color = '#28a745';
 }
